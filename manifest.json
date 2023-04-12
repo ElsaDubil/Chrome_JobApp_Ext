@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Elsa's Job App Extension",
+  "version": "1.0",
+  "description": "Autofills forms to fill in resume details, and can create cover letters",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
