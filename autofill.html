@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Resume</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  </head>
+  <body>
+    <div class="banner top-banner"></div>
+    <h1>Welcome to Elsa's Job Application Autofiller!</h1>
+    <form>
+      <div class="form-section">
+        <h2>Resume Information</h2>
+        <label for="resume-name">Resume Name:</label>
+        <input type="text" id="resume-name" name="resume-name" required>
+        <p>Please enter a name for your resume. This will be used to save your resume and access it later.</p>
+        <p><i>For example, if you are a scientist who codes, you might want to fill out this form twice, one with a resume emphasizing laboratory experiences, and one that emphasizes coding experiences. You might then want to save one as 'Lab Resume' and one as 'Technical Resume' so that  depending on which type of job you are applying for, your form can autofill to fit the job role better.</i></p>
+      </div>
+      <div class="form-section">
+        <h2>Personal Information</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      
+      <div id="education-section">
+        <h2>Education</h2>
+        <label for="degree-type">Type of degree:</label>
+        <select id="degree-type" name="degree-type">
+          <option value="Associate's">Associate's</option>
+          <option value="Bachelor of Science">Bachelor of Science</option>
+          <option value="Bachelor of Arts">Bachelor of Arts</option>
+          <option value="Master's">Master's</option>
+          <option value="PhD">PhD</option>
+        </select>
+        <label for="institution-name">Institution name:</label>
+        <input type="text" id="institution-name" name="institution-name"><br>
+        <label for="major">Major:</label>
+        <input type="text" id="major" name="major"><br>
+        <label for="grad-date">Graduation date:</label>
+        <input type="date" id="grad-date" name="grad-date"><br>
+      </div>
+      
+      <div class="form-section">
+        <h2>Work Experience</h2>
+        <div id="work-experience">
+          <div class="work-experience">
+            <h3>Work Experience</h3>
+            <div>
+              <label for="position-title">Position Title:</label>
+              <input type="text" id="position-title" name="position-title">
+            </div>
+            <div>
+              <label for="company-name">Company Name:</label>
+              <input type="text" id="company-name" name="company-name">
+            </div>
+            <div>
+              <label for="company-location">Company Location:</label>
+              <input type="text" id="company-location" name="company-location">
+            </div>
+            <div>
+              <label for="start-date">Start Date:</label>
+              <input type="date" id="start-date" name="start-date">
+            </div>
+            <div>
+              <label for="end-date">End Date:</label>
+              <input type="date" id="end-date" name="end-date">
+              <input type="checkbox" id="present" name="present" value="present">
+              <label for="present">Present</label>
+            </div>
+            <div>
+              <label for="responsibilities">Job Responsibilities:</label>
+              <textarea id="responsibilities" name="responsibilities"></textarea>
+            </div>
+          </div>
+      </div>
+      <button type="button" id="add-work-experience">Add Another Work Experience</button>
+      <button type="submit" id="save-btn">Save Information</button>
+    </form>
+    <script src="autofill.js"></script>
+    <script>
+     $(document).ready(function() {
+  var workExperience = $('#work-experience').html();
+
+  $('#add-work-experience').on('click', function() {
+    $('#work-experience').append(workExperience);
+  });
+
+  $('#education-section select').on('change', function() {
+    var degreeType = $(this).val();
+    if (degreeType === "PhD") {
+      $('#major').prop('disabled', true);
+    } else {
+      $('#major').prop('disabled', false);
+    }
+  });
+
+});
+
+    </script>
+  </body>
+</html>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+
+      /* Add CSS styles here to customize the appearance of the popup */
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        margin: 0;
+        padding: 20px;
+      }
+      /* Add the banner styles for top and bottom banners */
+      .banner {
+        background-image: url(images/cloudbanner.jpg);
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+        height: 50px;
+      }
+      .top-banner {
+        background-position: top;
+      }
+      .bottom-banner {
+        background-position: bottom;
+      } 
+      /* What headers should look like */
+      h1 {
+        font-size: 24px;
+        margin: 0 0 20px 0;
+        text-align: center;
+        color: #FFC0CB;
+        text-shadow: 1px 1px gray;
+      }
+      
+      button {
+        background-color: #FFC0CB;
+        color: BLACK;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        display: block;
+        width: 100%;
+        text-decoration: none !important;
+      }
+      
+      button:hover {
+        background-color: #FFC0CB;
+        text-decoration: none !important;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      
+      input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+        width: 100%;
+        padding: 16px 10px;
+        border: 1px solid lightpink;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+      }
+      
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+      
+      .form-section {
+        margin-bottom: 40px;
+      }
+      
+      .work-experience {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      
+      .work-experience label {
+        font-weight: bold;
+      }
+      
+      .add-experience-button {
+        display: block;
+        margin: 20px auto;
+      }
+      
+    
