@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add or Edit Basic Contact Information</title>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        $(document).ready(function() {
+          $('.top-banner, h1').on('click', function() {
+           console.log("Banner clicked")
+            window.location.href = 'index.html';
+          });
+        });
+      </script>  
+</head>
+  <body>
+    <div class="banner top-banner"></div>
+    <h1>Add or Edit Basic Contact Information</h1>
+    <p>Here is where you can add or edit your basic contact information.</p>
+    <form id="contact-info-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+  
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone"><br>
+  
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br>
+  
+        <label for="street1">Street Name 1:</label>
+        <input type="text" id="street1" name="street1"><br>
+  
+        <label for="street2">Street Name 2:</label>
+        <input type="text" id="street2" name="street2"><br>
+  
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city"><br>
+  
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state"><br>
+  
+        <label for="zipcode">Zip Code:</label>
+        <input type="text" id="zipcode" name="zipcode"><br>
+  
+        <button id="save-contact-info-btn" class="styled-btn">Save contact info</button>
+      </form>
+    <div class="button-container">
+      <a href="index.html"><button>Back to Main Page</button></a>
+    </div>
+    <div class="banner bottom-banner"></div>
+  </body>
+</html>

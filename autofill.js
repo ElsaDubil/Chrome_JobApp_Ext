@@ -5,6 +5,27 @@ addButton.addEventListener('click', function() {
   let newExperience = workExperience.firstElementChild.cloneNode(true);
   workExperience.appendChild(newExperience);
 });
+// open a connection to the indexedDB database
+var request = indexedDB.open("resumeDatabase", 1);
+
+// handle errors that may occur while opening the database
+request.onerror = function() {
+  alert("There was an error opening the database.");
+};
+
+// handle the creation of the object stores
+request.onupgradeneeded = function(event) {
+  var db = event.target.result;
+
+  // create the 'userInfo' object store
+  var userInfoStore = db.createObjectStore("userInfo", { keyPath: "email" });
+  userInfoStore.createIndex("nameIndex", "name", { unique: false });
+  userInfoStore.createIndex("phoneIndex", "phone", { unique: true });
+
+  // create the 'resumes' object store
+  var resumesStore = db.createObjectStore("resumes", { keyPath: "resumeId", autoIncrement: true });
+  resumesStore.createIndex("emailIndex", "email", { unique: false });
+};
 
 // find the "Add another work experience" button
 var addBtn = $("#add-work-experience");

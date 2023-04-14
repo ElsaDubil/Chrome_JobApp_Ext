@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Manage Resumes</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+          $('.top-banner, h1').on('click', function() {
+            window.location.href = 'index.html';
+          });
+        });
+      </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="banner top-banner"></div>
+    <header>
+      <h1>Manage Resumes</h1>
+      <select id="resume-dropdown">
+        <option value="">Select a Resume</option>
+        <!-- Option elements for each saved resume will be added with JavaScript -->
+      </select>
+    </header>
+    <main>
+      <!-- Buttons for editing and deleting a resume will be added with JavaScript -->
+    </main>
+    <div class="banner bottom-banner"></div>
+    <script src="manageresume.js"></script>
+  </body>
+</html>
